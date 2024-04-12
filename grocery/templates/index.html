@@ -1,0 +1,1057 @@
+{% load static %}
+<html>
+    <head>
+        <title>Grocery</title>
+		  <link rel="icon"  type="img/icon" href="{% static 'img/favicon.jpg' %}">
+        <!--font awesome-->
+        <link rel="stylesheet" href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <!--font awesome-->
+
+                <!--code for linking css-->
+              <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+                 <!--code for linking css-->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            
+
+
+                 <meta name="viewport" content="width=device-width,initial-scale-scale=1.0">
+<style>
+
+.item:hover
+{
+	box-shadow: 4px  4px 10px 4px var(--green);
+}
+.card-img-top
+{
+margin:1rem 0;
+	height:15rem;
+}
+
+
+</style>
+    </head>
+    <body>
+      <!---header -->
+      <header class="header">
+        <a href="#" class="logo"> <i class="fa fa-shopping-basket"> </i>  Grocery </a>
+<nav class="navbar">
+<a href="#Home">Home </a>
+<a href="#Features"> Features </a>
+<a href="#Products"> Products</a>
+<a href="#Categories"> Categories</a>
+<a href="#Reviews">Reviews </a>
+<a href="#Blog"> Blog </a>
+</nav>
+<div class="icons">
+  <div class="fa fa-bars" id="menu-btn"></div>
+  <div class="fa fa-search" id="search-btn"></div>
+  <div class="fa fa-shopping-cart" id="cart-btn"></div>
+  <div class="fa fa-user" id="login-btn"></div>
+</div>
+<form class="search-form">
+<input type="search" id="search-box" placeholder="Search here...">
+<label for="search-box" class="fa fa-search"> </label>
+</form>
+
+<div class="shopping-cart">
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="{% static 'img/watermelon.webp' %}">
+    <div class="content">
+      <h3> Watermelon </h3>
+    <span class="price"> Rs. 60 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+</div>
+
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="{% static 'img/apple.png' %}" >
+    <div class="content">
+      <h3>Apple </h3>
+    <span class="price"> Rs. 160 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+</div>
+
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="{% static 'img/chicken.jpg' %}">
+    <div class="content">
+      <h3> chicken </h3> 
+    <span class="price"> Rs. 260 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+  </div>
+
+<div class="total">Total :  Rs. 480 /- </div>
+<a href="#" class="btn"> Checkout </a>
+</div>
+
+<form action="#" class="login-form">
+  <h3> Login Now </h3>
+  <input type="email" placeholder="enter your email" class="box" >
+<input type="password" placeholder=" your password" class="box" >
+<p> Forget your password<a href="#"> Click Here  </a></p>
+<p>  Don't have an Account <button onclick="show();"style="color: green;"> Create Now </button></p>
+  <input type="submit" value="Login Now" class="btn" >
+  </form>
+
+<form action="#" class="register-form" id="reg" style="display: none">
+  <h3> Register Now </h3>
+   <input type="text" placeholder="Enter your first name" class="box" >
+     <input type="text" placeholder="Enter your last name" class="box" >
+	 <input type="number"  placeholder="Phone no" class="box">
+	<input type="date" class="box">
+  <input type="email" placeholder="enter your email" class="box" >
+  <input type="password" placeholder=" your password" class="box" >
+  <input type="submit" value="Resiter Now" class="btn" >
+  <button  class="btn" onclick="hide()"> Close </button>
+  
+</form>
+
+      </header>
+         <!---header -->
+
+      
+    <!---banner section -->
+   
+<div class="Home" id="Home">
+  <div class="content">
+    <h3> Fresh And<span> Organic </span> Products For you </h3>
+    <p> Organic fruits and vegetables, classification, why to choose them, benefits and seasons. Organic fruit and vegetables are becoming more and more widespread and there are many reasons why supermarkets around the world are starting to include a greater number of food products certified as organic. </p>
+    <a href="../shop" class="btn"> Shop Now </a>
+  </div>
+</div>
+
+ <!---banner section -->
+
+
+<!---Features-->
+<section class="Features" id="Features">
+  <h1 class="heading"> Our <span> Features </span>  </h1>
+
+<div class="box-container">
+  <div class="box">
+    <img src="{% static 'img/fresh.jpg' %}" >
+    <h3> Fresh and Organic </h3>
+    <p>  Organic fruits and vegetables, classification, why to choose them, benefits and seasons.  </p>
+    <a href="#" class="btn"> Read More </a>
+  </div>
+
+  <div class="box">
+    <img src="{% static 'img/delivery.avif' %}">
+    <h3> Delivery </h3>
+    <p> Right time delivery and time to time service provide.</p>
+    <a href="#" class="btn"> Read More </a>
+  </div>
+
+  <div class="box">
+    <img src="{% static 'img/payment.jpg' %}">
+    <h3> Payment </h3>
+    <p> Any way easy online offlice service. </p>
+    <a href="#" class="btn"> Read More </a>
+  </div>
+</div>
+</section>
+<!---Features-->
+
+
+<!---products-->
+<div class="container">
+  <div class="row">
+<section  class="Products" id="Products">
+  <h1 class="heading"> Our <span> Products </span>  </h1>
+<div class="owl-carousel owl-theme">
+  <div class="item" > 
+  <div class="card" style=" border: 0px solid red;  
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem;
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<div class="card-body">
+<img src="https://tse3.mm.bing.net/th?id=OIP.wycyTq2nf-WpkDxfYf3gigHaEo&pid=Api&P=0&h=180" class="card-img-top" alt="...">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);"> Potato </h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color); 
+    line-height: 1.8;
+	 padding: 1rem;"> Rs.45/ -- 15.99/ --</p>
+ <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart </a>
+</div>
+</div>
+</div>
+
+  <div class="item">
+  <div class="card" style="
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem;
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="https://tse3.explicit.bing.net/th?id=OIP.wV9H_p7UCWdsWi2oMgGrBgHaGi&pid=Api&P=0&h=180" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);"> Cherry </h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color);line-height: 1.8;
+	 padding: 1rem;">Rs.50/ -- 60.99/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart </a>
+</div>
+</div></div>
+
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem;
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="{% static 'img/chicken.jpg' %}" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);"> Meat </h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color); line-height: 1.8;
+	 padding: 1rem;">Rs.250/ -- 280/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart </a>
+</div>
+</div></div>
+  
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem;
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="https://tse3.mm.bing.net/th?id=OIP.aGbqmBCGCkfDYXbIyl6VpgHaFy&pid=Api&P=0&h=180" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);"> Brinjal</h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color); line-height: 1.8;
+	 padding: 1rem;">Rs.10/ -- 15.99/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+
+  <div class="item">
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="https://tse3.explicit.bing.net/th?id=OIP.LxNhBGz3TaMpYS-arlErzQHaHa&pid=Api&P=0&h=180" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);"> Radish </h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color);line-height: 1.8;
+	 padding: 1rem;">Rs.15/ -- 20/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem;
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="https://tse2.mm.bing.net/th?id=OIP.8C8c9XnQXSHfXbueb_AZCQHaF-&pid=Api&P=0&h=180" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title"style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Onion</h3>
+<p class="card-text"style="font-size: 1.5rem;
+   color: var(--light-color);line-height: 1.8;
+	 padding: 1rem;">Rs.45/ -- 50 --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+  
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem;
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="https://tse4.mm.bing.net/th?id=OIP.qbtfTieEpOA4y66SY0zvEAHaHa&pid=Api&P=0&h=180" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Cauliflower</h3>
+<p class="card-text"style="font-size: 1.5rem;
+   color: var(--light-color);line-height: 1.8;
+	 padding: 1rem;">Rs.30-- 40/</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="https://tse3.mm.bing.net/th?id=OIP.MAIgGI6xRjMVX4mHIl_GtgHaFY&pid=Api&P=0&h=180" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Carrot</h3>
+<p class="card-text"style="font-size: 1.5rem;
+   color: var(--light-color); line-height: 1.8;
+	 padding: 1rem;">Rs.35/ -- 49/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="https://tse2.mm.bing.net/th?id=OIP.yOkQl1kiITBJA0oUopHq3AHaE8&pid=Api&P=0&h=180" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Card title</h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color); line-height: 1.8;
+	 padding: 1rem;"> Rs.80/ -- 150/ --</p>
+<p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+  </div>
+</section>
+</div>
+</div>
+
+
+<!--owl 2-->
+</div>
+
+<section>
+
+
+<!--owl 2-->
+<div class="row">
+ <div class="owl-carousel owl-theme ">
+  <div class="item" > 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem;  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<div class="card-body">
+<img src="img/onion.jpg" class="card-img-top" alt="...">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);"> Onion </h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color);line-height: 1.8;
+	 padding: 1rem;"> Rs.45/ -- 15.99/ --</p>
+ <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart </a>
+</div>
+</div>
+</div>
+
+  <div class="item">
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="img/watermelon.webp" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);"> Watermelon </h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color);line-height: 1.8;
+	 padding: 1rem;">Rs.45/ -- 15.99/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart </a>
+</div>
+</div></div>
+
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="img/meat.avif" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);"> Meat </h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color); line-height: 1.8;
+	 padding: 1rem;">Rs.45/ -- 15.99/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart </a>
+</div>
+</div></div>
+  
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="img/meat.avif" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Card title</h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color); line-height: 1.8;
+	 padding: 1rem;">Rs.45/ -- 15.99/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+
+  <div class="item">
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="img/meat.avif" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Card title</h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color); line-height: 1.8;
+	 padding: 1rem;">Rs.45/ -- 15.99/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="img/meat.avif" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title"style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Card title</h3>
+<p class="card-text"style="font-size: 1.5rem;
+   color: var(--light-color);line-height: 1.8;
+	 padding: 1rem;">Rs.45/ -- 15.99/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+  
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="img/meat.avif" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Card title</h3>
+<p class="card-text"style="font-size: 1.5rem;
+   color: var(--light-color);line-height: 1.8;
+	 padding: 1rem;">Rs.45/ -- 15.99/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="img/meat.avif" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Card title</h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color);line-height: 1.8;
+	 padding: 1rem;">Rs.45/ -- 15.99/ --</p>
+   <p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<img src="img/meat.avif" class="card-img-top" alt="...">
+<div class="card-body">
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Card title</h3>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color);line-height: 1.8;
+	 padding: 1rem;">Rs.45/ -- 15.99/ --</p>
+<p class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</p>
+<a href="#" class="btn">Add to cart</a>
+</div>
+</div></div>
+  </div>
+</div>
+</section>
+
+<!--categories-->
+
+<section class="Categories" id="Categories">
+<h1 class="heading"> Product <span> Categories </span></h1>
+<div class="box-container">
+<div class="box">
+<img src="{%static 'img/veg.png' %}">
+<h3> Vegetables </h3>
+<p> Upto 45% off </p>
+<a href="../vegetable/" class="btn"> Shop now </a>
+</div>
+
+<div class="box">
+<img src="{% static 'img/fruit.png' %}">
+<h3> Fruits </h3>
+<p> Upto 40% off </p>
+<a href="../shop/" class="btn"> Shop now </a>
+</div>
+
+<div class="box">
+<img src="{% static 'img/kirana.png' %}">
+<h3> Beverages </h3>
+<p> Upto 45% off </p>
+<a href="/" class="btn"> Shop now </a>
+</div>
+
+<div class="box">
+<img src="https://tse1.mm.bing.net/th?id=OIP.kWZyPOquRwjHweP8AoRfoQHaEM&pid=Api&P=0&h=180">
+<h3>  Toys </h3>
+<p> Upto 35% off </p>
+<a href="shop.html" class="btn"> Shop now </a>
+</div>
+</div>
+</section>
+<!--categories-->
+
+<!--reviews-->
+<section class="Reviews" id="Reviews">
+<h1 class="heading"> Customer's <span> Reviews</span></h1>
+<div class="owl-carousel owl-theme">
+  <div class="item" > 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;">
+<div class="card-body"><center>
+<img src="{% static 'img/me.jpg' %}" class="card-img-top" alt="..." style="height:10rem;
+width:10rem;
+border-radius:50%;"></center>
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color); 
+    line-height: 1.8;
+	 padding: 1rem;">Certainly! I can provide information or reviews on various groceries or types of groceries. However, so I might not have the latest details. If you have specific groceries or categories in mind, feel free to ask, and I'll do my best to provide relevant information or reviews!
+</p>
+<h3 style=" font-size: 2.2rem;
+   line-height: 1.8;
+   color: var(--black);"> Manisha </h3>
+ <span class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+</div>
+</div>
+</div>
+
+
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;"><center>
+<img src="{% static 'img/manisha.jpg' %}" class="card-img-top" alt="..." style="height:10rem;
+width:10rem;
+border-radius:50%;"></center>
+<div class="card-body">
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color); line-height: 1.8;
+	 padding: 1rem;">I don't have the ability to access real-time data, including current reviews of specific grocery stores. These platforms typically provide feedback from people who have shopped at a particular grocery store and can give you an idea of the overall customer experience.</p>
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);"> Nitya </h3>
+<span class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</span>
+</div>
+</div></div>
+ 
+  <div class="item"> 
+  <div class="card" style="grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem; 
+  border: 0px solid red;
+background: #fff;
+border-radius: .5rem;
+text-align: center;
+padding: 3rem 2rem;
+outline-offset: -1rem;
+outline: var(--outline);
+box-shadow: var(--box-shaddow);
+transition: .2s linear;"><center>
+<img src="{% static 'img/me.jpg' %}" class="card-img-top" alt="..." style="height:10rem;
+width:10rem;
+border-radius:50%;"></center>
+<div class="card-body">
+<p class="card-text" style="font-size: 1.5rem;
+   color: var(--light-color); line-height: 1.8;
+	 padding: 1rem;"> you can search for it on these platforms and read through the reviews to get an understanding of the store's strengths and weaknesses. Keep in mind that individual experiences,so it's helpful to read multiple reviews to get a more comprehensive view.</p>
+<h3 class="card-title" style="font-size: 2.5rem;
+   line-height: 1.8;
+   color: var(--black);">Laxmi</h3>
+<span class="star" style=" font-size: 1.7rem;
+   color: orange;
+   padding: 1.7rem;">
+ <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+	</span>
+</div>
+</div></div>
+  </div>
+</section>
+<!--reviews-->
+
+<!--blog-->
+<section class="Blog" id="Blog">
+<h1 class="heading"> Our <span> Blogs</span></h1>
+<div class="box-container">
+<div class="box">
+<img src="{% static 'img/snacks.webp' %}">
+<div class="content">
+<div class="icons">
+<a href="#"><i class="fa fa-user"> </i> By user</a>
+<a href="#"><i class="fa fa-calendar"> </i>1st may, 2023 </a>
+</div>
+<h3> Fresh Snacks </h3>
+<p>you can search for it on these platforms and read through the reviews to get an understanding of the store's strengths and weaknesses. Keep in mind that individual experiences,so it's helpful to read multiple reviews to get a more comprehensive view. </p>
+</div>
+<a href="#" class="btn"> Shop now </a>
+</div>
+
+<div class="box">
+<img src="{% static 'img/veg.png' %}">
+<div class="content">
+<div class="icons">
+<a href="#"><i class="fa fa-user"> </i> By user</a>
+<a href="#"><i class="fa fa-calendar"> </i>1st may, 2023 </a>
+</div>
+<h3> Fresh and organic vegetables </h3>
+<p>you can search for it on these platforms and read through the reviews to get an understanding of the store's strengths and weaknesses. Keep in mind that individual experiences,so it's helpful to read multiple reviews to get a more comprehensive view. </p>
+</div>
+<a href="#" class="btn"> Shop now </a>
+</div>
+
+<div class="box">
+<img src="{% static 'img/fruit.png' %}">
+<div class="content">
+<div class="icons">
+<a href="#"><i class="fa fa-user"> </i> By user</a>
+<a href="#"><i class="fa fa-calendar"> </i>1st may, 2023 </a>
+</div>
+<h3> Fresh and organic Fruits </h3>
+<p>you can search for it on these platforms and read through the reviews to get an understanding of the store's strengths and weaknesses. Keep in mind that individual experiences,so it's helpful to read multiple reviews to get a more comprehensive view. </p>
+</div>
+<a href="#" class="btn"> Shop now </a>
+</div>
+</div>
+</section>
+<!--blog-->
+<!--footer-->
+<section class="footer">
+<div class="box-container">
+<div class="box">
+<h3> Grocery <i class="fa fa-shopping-basket"></i></h3>
+<p>Fell free to follow us on our social media Handlers all the the thinks are given below.</p>
+<div class="share"> 
+<a href="https://www.youtube.com/@Manishaprajapati952" class="fa fa-youtube" target="_blank"></a>
+<a href="#" class="fa fa-twitter" target="_blank"></a>
+<a href="https://www.instagram.com/attitude_dolly34?utm_source=qr&r=nametag" class="fa fa-instagram" target="_blank"></a>
+<a href="https://www.linkedin.com/in/manisha-prajapati-b5254127a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fa fa-linkedin" target="_blank"></a>
+</div>
+</div>
+
+<div class="box">
+<h3> Contact Info </h3>
+<a href="tel:9118765885" class="links"><i class="fa fa-phone"></i>  +9118765885 </a>
+<a href="tel:9334398132" class="links"><i class="fa fa-phone"></i>  +9334398132 </a>
+<a href="#" class="links"><i class="fa fa-envelope"></i> manisha.pajapati.2005@gmail.com  </a>
+<a href="#" class="links"><i class="fa fa-map-marker"></i> danopur deoria,india ,274001 </a>
+</div>
+
+<div class="box">
+<h3>Quick Links </h3>
+<a href="#Home" class="links"><i class="fa fa-arrow-right"></i> Home </a>
+<a href="#Features" class="links"><i class="fa fa-arrow-right"></i> Features </a>
+<a href="#Products" class="links"><i class="fa fa-arrow-right"></i> Products </a>
+<a href="#Categories" class="links"><i class="fa fa-arrow-right"></i> Categories </a>
+<a href="#Reviews" class="links"><i class="fa fa-arrow-right"></i> Reviews </a>
+<a href="#Blog" class="links"><i class="fa fa-arrow-right"></i> Blog </a>
+
+</div>
+
+<div class="box">
+<h3> Newsletter </h3>
+<p> Subscribe For latest Updates </p>
+<input type="email" placeholder="your email" class="email" >
+<input type="submit" value="Subscribe" class="btn"></br>
+<img src="{% static 'img/card.png' %}" class="payment">
+</div>
+</div>
+
+<div class="credit">
+Created by <span> Manisha prajapati </span> | All Right Reserverd 
+</div>
+</section>
+
+
+<!--footer-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+$('.owl-carousel').owlCarousel({
+
+loop:true,
+margin:20,
+
+nav:true,
+
+responsive:{
+    0:{
+        items:1
+    },
+    600:{
+        items:2
+    },
+    1000:{
+        items:3
+    }
+}
+})
+
+function show(){
+  document.getElementById('reg').style.display="block";
+}
+function hide(){
+  document.getElementById('reg').style.display="none";
+}
+</script>
+      <script src="{% static 'script.js' %}">  </script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-element-bundle.min.js"> </script>
+    </body>
+    </html>

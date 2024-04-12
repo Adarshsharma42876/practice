@@ -1,0 +1,97 @@
+{% load static %}
+<html>
+<head>
+  <link rel="stylesheet" href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <!--font awesome-->
+
+                <!--code for linking css-->
+                   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+ <!---header -->
+      <header class="header">
+        <a href="#" class="logo"> <i class="fa fa-shopping-basket"> </i>  Grocery </a>
+<nav class="navbar">
+<a href="#Home">Home </a>
+<a href="#Features"> Features </a>
+<a href="#Products"> Products</a>
+<a href="#Categories"> Categories</a>
+<a href="#Reviews">Reviews </a>
+<a href="#Blog"> Blog </a>
+</nav>
+<div class="icons">
+  <div class="fa fa-bars" id="menu-btn"></div>
+  <div class="fa fa-search" id="search-btn"></div>
+  <div class="fa fa-shopping-cart" id="cart-btn"></div>
+  <div class="fa fa-user" id="login-btn"></div>
+</div>
+<form class="search-form">
+<input type="search" id="search-box" placeholder="Search here...">
+<label for="search-box" class="fa fa-search"> </label>
+</form>
+
+<div class="shopping-cart">
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="img/watermelon.webp">
+    <div class="content">
+      <h3> Watermelon </h3>
+    <span class="price"> Rs. 60 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+</div>
+
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="img/apple.png" >
+    <div class="content">
+      <h3>Apple </h3>
+    <span class="price"> Rs. 160 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+</div>
+
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="img/chicken.jpg">
+    <div class="content">
+      <h3> chicken </h3> 
+    <span class="price"> Rs. 260 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+  </div>
+
+<div class="total">Total :  Rs. 480 /- </div>
+<a href="#" class="btn"> Checkout </a>
+</div>
+
+<form action="#" class="login-form">
+  <h3> Login Now </h3>
+  <input type="email" placeholder="enter your email" class="box" >
+<input type="password" placeholder=" your password" class="box" >
+<p> Forget your password<a href="#"> Click Here  </a></p>
+<p>  Don't have an Account <button onclick="show();"style="color: green;"> Create Now </button></p>
+  <input type="submit" value="Login Now" class="btn" >
+  </form>
+
+<form action="#" class="register-form" id="reg" style="display: none">
+  <h3> Register Now </h3>
+   <input type="text" placeholder="Enter your first name" class="box" >
+     <input type="text" placeholder="Enter your last name" class="box" >
+	 <input type="number"  placeholder="Phone no" class="box">
+	<input type="date" class="box">
+  <input type="email" placeholder="enter your email" class="box" >
+  <input type="password" placeholder=" your password" class="box" >
+  <input type="submit" value="Resiter Now" class="btn" >
+  <button  class="btn" onclick="hide()"> Close </button>
+  
+</form>
+
+      </header>
+         <!---header -->
+
+
+	   <script src="{% static 'script.js' %}">  </script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-element-bundle.min.js">
+</body>
+</html>

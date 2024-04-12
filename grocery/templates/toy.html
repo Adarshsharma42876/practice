@@ -1,0 +1,275 @@
+{% load static %}
+<html>
+    <head>
+        <title>Grocery</title>
+		  <link rel="icon"  type="img/icon" href="{% static 'img/favicon.jpg' %}">
+        <!--font awesome-->
+        <link rel="stylesheet" href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <!--font awesome-->
+
+                <!--code for linking css-->
+              <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+                 <!--code for linking css-->
+             <meta name="viewport" content="width=device-width,initial-scale-scale=1.0">
+<style>
+
+.item:hover
+{
+	box-shadow: 4px  4px 10px 4px var(--green);
+}
+.card-img-top
+{
+margin:1rem 0;
+	height:15rem;
+}
+
+
+</style>
+    </head>
+    <body>
+      <!---header -->
+      <header class="header">
+        <a href="#" class="logo"> <i class="fa fa-shopping-basket"> </i>  Grocery </a>
+<nav class="navbar">
+<a href="../Home/">Home </a>
+<a href="../Home/#Features"> Features </a>
+<a href="../Home/#Products"> Products</a>
+<a href="../Home/#Categories"> Categories</a>
+<a href="../Home/#Reviews">Reviews </a>
+<a href="../Home/#Blog"> Blog </a>
+</nav>
+<div class="icons">
+  <div class="fa fa-bars" id="menu-btn"></div>
+  <div class="fa fa-search" id="search-btn"></div>
+  <div class="fa fa-shopping-cart" id="cart-btn"></div>
+  <div class="fa fa-user" id="login-btn"></div>
+</div>
+<form class="search-form">
+<input type="search" id="search-box" placeholder="Search here...">
+<label for="search-box" class="fa fa-search"> </label>
+</form>
+
+<div class="shopping-cart">
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="{% static 'img/watermelon.webp' %}">
+    <div class="content">
+      <h3> Watermelon </h3>
+    <span class="price"> Rs. 60 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+</div>
+
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="{% static 'img/apple.png' %}" >
+    <div class="content">
+      <h3>Apple </h3>
+    <span class="price"> Rs. 160 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+</div>
+
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="{% static 'img/chicken.jpg' %}">
+    <div class="content">
+      <h3> chicken </h3> 
+    <span class="price"> Rs. 260 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+  </div>
+
+<div class="total">Total :  Rs. 480 /- </div>
+<a href="#" class="btn"> Checkout </a>
+</div>
+
+<form action="#" class="login-form">
+  <h3> Login Now </h3>
+  <input type="email" placeholder="enter your email" class="box" >
+<input type="password" placeholder=" your password" class="box" >
+<p> Forget your password<a href="#"> Click Here  </a></p>
+<p>  Don't have an Account <button onclick="show();"style="color: green;"> Create Now </button></p>
+  <input type="submit" value="Login Now" class="btn" >
+  </form>
+
+<form action="#" class="register-form" id="reg" style="display: none">
+  <h3> Register Now </h3>
+   <input type="text" placeholder="Enter your first name" class="box" >
+     <input type="text" placeholder="Enter your last name" class="box" >
+	 <input type="number"  placeholder="Phone no" class="box">
+	<input type="date" class="box">
+  <input type="email" placeholder="enter your email" class="box" >
+  <input type="password" placeholder=" your password" class="box" >
+  <input type="submit" value="Resiter Now" class="btn" >
+  <button  class="btn" onclick="hide()"> Close </button>
+  
+</form>
+</header>
+        
+  <section class="Vegetables" >
+    <h1 class="heading"> <span style="margin-top:7rem;"> Toys and makeup </span></h1>
+    <div class="box-container">
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.R-infDy-iyXIHNVT5PMZIQHaFP&pid=Api&P=0&h=180">
+    <h3> Lipstic </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.oiS-5jHDp2RAdwUtdr0d5wHaHa&pid=Api&P=0&h=180">
+    <h3> makeup kit</h3>
+    <p> Upto 40% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.aGbqmBCGCkfDYXbIyl6VpgHaFy&pid=Api&P=0&h=180">
+    <h3> Brinjal </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.explicit.bing.net/th?id=OIP.LxNhBGz3TaMpYS-arlErzQHaHa&pid=Api&P=0&h=180">
+    <h3> Radish </h3>
+    <p> Upto 35% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    </div>
+    </section>
+    
+    <section class="Vegetables" >
+    <div class="box-container">
+    <div class="box">
+    <img src="https://tse2.mm.bing.net/th?id=OIP.8C8c9XnQXSHfXbueb_AZCQHaF-&pid=Api&P=0&h=180">
+    <h3> Onion </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart  </a>
+    </div>
+    
+    
+    <div class="box">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.dQ7oBkXYd_yLeaHV1mN0SwHaGH&pid=Api&P=0&h=180">
+    <h3> Garlic </h3>
+    <p> Upto 40% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.RDLt36cxui6M03y7B3YFFQAAAA&pid=Api&P=0&h=180">
+    <h3> Lady's Finger </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart  </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.qbtfTieEpOA4y66SY0zvEAHaHa&pid=Api&P=0&h=180">
+    <h3> Cauliflower </h3>
+    <p> Upto 35% off </p>
+    <a href="#" class="btn"> Add to cart</a>
+    </div>
+    </div>
+    </section>
+    
+    <section class="Vegetables" >
+    <div class="box-container">
+    <div class="box">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.D1kDLQ8VCdAmW6YcTWI4HwHaHM&pid=Api&P=0&h=180">
+    <h3> Pumpkin </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.MAIgGI6xRjMVX4mHIl_GtgHaFY&pid=Api&P=0&h=180">
+    <h3>  Carrot </h3>
+    <p> Upto 40% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.F0hjYqKQ8podPwaUZ9TkJQHaHf&pid=Api&P=0&h=180">
+    <h3> Badminton </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.Js8GXLV6QQSB9wHDMGlc4gHaHa&pid=Api&P=0&h=180">
+    <h3> Barbie</h3>
+    <p> Upto 35% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    </div>
+    </section>
+    
+    <section class="Vegetables" >
+    <div class="box-container">
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.wuTW1e2nMCtAtNJ64MirNAHaGS&pid=Api&P=0&h=180">
+    <h3>  Rounder </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.9JNj2agFeAcDqJommIay4wAAAA&pid=Api&P=0&h=180">
+    <h3> Phone </h3>
+    <p> Upto 40% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.JeX7KJagaHxkVg3N4BMGBgHaHa&pid=Api&P=0&h=180">
+    <h3> Toys </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.l6y_bF-1FvDIp2uIpj33vwHaHa&pid=Api&P=0&h=180">
+    <h3>  Bike </h3>
+    <p> Upto 35% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    </div>
+    </section>
+    
+    <section class="Vegetables" >
+    <div class="box-container">
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.2UAIuoAdhbYMnxdWqdWSvgHaHh&pid=Api&P=0&h=180">
+    <h3> Brocoli </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.Dpu9qSF1yEb_xWhg0xH1qAHaHa&pid=Api&P=0&h=180">
+    <h3> Train </h3>
+    <p> Upto 40% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.pgER5lIZNZuMZLZGQHhjdwHaFI&pid=Api&P=0&h=180">
+    <h3> Capsium </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart  </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.itvtbEy_q0jXneYp2NiihwHaHa&pid=Api&P=0&h=180">
+    <h3> Bottle Gourd </h3>
+    <p> Upto 35% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    </div>
+    </section>
+ 
+
+      <script src="{% static 'script.js' %}">  </script>
+    </body>
+</html>

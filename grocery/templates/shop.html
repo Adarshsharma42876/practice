@@ -1,0 +1,324 @@
+{% load static %}
+<html>
+    <head>
+        <title>Grocery</title>
+		  <link rel="icon"  type="img/icon" href="{% static 'img/favicon.jpg' %}">
+        <!--font awesome-->
+        <link rel="stylesheet" href="https:\\cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <!--font awesome-->
+
+                <!--code for linking css-->
+              <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+                 <!--code for linking css-->
+             <meta name="viewport" content="width=device-width,initial-scale-scale=1.0">
+<style>
+
+.item:hover
+{
+	box-shadow: 4px  4px 10px 4px var(--green);
+}
+.card-img-top
+{
+margin:1rem 0;
+	height:15rem;
+}
+
+
+</style>
+    </head>
+    <body>
+      <!---header -->
+      <header class="header">
+        <a href="#" class="logo"> <i class="fa fa-shopping-basket"> </i>  Grocery </a>
+<nav class="navbar">
+<a href="../Home/">Home </a>
+<a href="../Home/#Features"> Features </a>
+<a href="../Home/#Products"> Products</a>
+<a href="../Home/#Categories"> Categories</a>
+<a href="../Home/#Reviews">Reviews </a>
+<a href="../Home/#Blog"> Blog </a>
+</nav>
+<div class="icons">
+  <div class="fa fa-bars" id="menu-btn"></div>
+  <div class="fa fa-search" id="search-btn"></div>
+  <div class="fa fa-shopping-cart" id="cart-btn"></div>
+  <div class="fa fa-user" id="login-btn"></div>
+</div>
+<form class="search-form">
+<input type="search" id="search-box" placeholder="Search here...">
+<label for="search-box" class="fa fa-search"> </label>
+</form>
+
+<div class="shopping-cart">
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="{% static 'img/watermelon.webp' %}">
+    <div class="content">
+      <h3> Watermelon </h3>
+    <span class="price"> Rs. 60 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+</div>
+
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="{% static 'img/apple.png' %}" >
+    <div class="content">
+      <h3>Apple </h3>
+    <span class="price"> Rs. 160 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+</div>
+
+  <div class="box">
+    <i class="fa fa-trash"> </i>
+    <img src="{% static 'img/chicken.jpg' %}">
+    <div class="content">
+      <h3> chicken </h3> 
+    <span class="price"> Rs. 260 </span>
+    <span class="quantity"> Qty : 1</span>
+  </div>
+  </div>
+
+<div class="total">Total :  Rs. 480 /- </div>
+<a href="#" class="btn"> Checkout </a>
+</div>
+
+<form action="#" class="login-form">
+  <h3> Login Now </h3>
+  <input type="email" placeholder="enter your email" class="box" >
+<input type="password" placeholder=" your password" class="box" >
+<p> Forget your password<a href="#"> Click Here  </a></p>
+<p>  Don't have an Account <button onclick="show();"style="color: green;"> Create Now </button></p>
+  <input type="submit" value="Login Now" class="btn" >
+  </form>
+
+<form action="#" class="register-form" id="reg" style="display: none">
+  <h3> Register Now </h3>
+   <input type="text" placeholder="Enter your first name" class="box" >
+     <input type="text" placeholder="Enter your last name" class="box" >
+	 <input type="number"  placeholder="Phone no" class="box">
+	<input type="date" class="box">
+  <input type="email" placeholder="enter your email" class="box" >
+  <input type="password" placeholder=" your password" class="box" >
+  <input type="submit" value="Resiter Now" class="btn" >
+  <button  class="btn" onclick="hide()"> Close </button>
+  
+</form>
+</header>
+
+<section class="Shop" id="Shop">
+    <h1 class="heading"> <span style="margin-top:7rem;"> Fruits </span></h1>
+    <div class="box-container">
+    <div class="box">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.i_4ZkjGBTXdqysQB74-tBgHaFb&pid=Api&P=0&h=180">
+    <h3> Banana </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP._LbidJPlrccMF-RpaYRUiAHaEo&pid=Api&P=0&h=180">
+    <h3> Straberry </h3>
+    <p> Upto 40% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.grkWMtQTxBhBy-sjZ3jTHQHaLH&pid=Api&P=0&h=180">
+    <h3> Pineapple </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.0uLmK8Ir6tQ8jiCurAKVkwHaIz&pid=Api&P=0&h=180">
+    <h3> Appple </h3>
+    <p> Upto 35% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    </div>
+    </section>
+    
+    <section class="Shop" >
+    <div class="box-container">
+    <div class="box">
+    <img src="https://www.onebuzz.in/image/cache/data/Amitbajaj/FreshFruits/Safedamango-900x900.png">
+    <h3> Mango </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart  </a>
+    </div>
+    
+    
+    <div class="box">
+    <img src="http://www.hdwallpapersfreedownload.com/uploads/large/fruits/orange-fruit-with-leaf-hd.jpg">
+    <h3> orange </h3>
+    <p> Upto 40% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.xBPZzzcPB3KbalD4EiLCswHaLH&pid=Api&P=0&h=180">
+    <h3> Watermelon </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart  </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse2.mm.bing.net/th?id=OIP.XMMt3oq6pAcJ4z9L1ChQ0gHaE9&pid=Api&P=0&h=180">
+    <h3> Guava </h3>
+    <p> Upto 35% off </p>
+    <a href="#" class="btn"> Add to cart</a>
+    </div>
+    </div>
+    </section>
+    
+    <section class="Shop" >
+    <div class="box-container">
+    <div class="box">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.BPbR83dxxi0kNXh80TuB_QHaHa&pid=Api&P=0&h=180">
+    <h3> Beetroot </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse2.mm.bing.net/th?id=OIP.yOkQl1kiITBJA0oUopHq3AHaE8&pid=Api&P=0&h=180">
+    <h3> Grapes </h3>
+    <p> Upto 40% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.56vvNoY8uUkH0xbAcubtaQHaEK&pid=Api&P=0&h=180">
+    <h3> Promogranate </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://daily.jstor.org/wp-content/uploads/2017/05/avocado_1050x700.jpg">
+    <h3> Avecado </h3>
+    <p> Upto 35% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    </div>
+    </section>
+    
+    <section class="Shop" >
+    <div class="box-container">
+    <div class="box">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.bgHiRb7RbpmPEVHJAub4igHaHa&pid=Api&P=0&h=180">
+    <h3> Coconut </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.O408laMfO-qU5BJ9DS4DzAHaE5&pid=Api&P=0&h=180">
+    <h3> Papaya </h3>
+    <p> Upto 40% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.explicit.bing.net/th?id=OIP.wV9H_p7UCWdsWi2oMgGrBgHaGi&pid=Api&P=0&h=180">
+    <h3> Cheery </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.AY2d8PjyUOa6tt6PxDkqDwHaE7&pid=Api&P=0&h=180">
+    <h3> Kiwi </h3>
+    <p> Upto 35% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    </div>
+    </section>
+    
+    <section class="Shop" >
+    <div class="box-container">
+    <div class="box">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.ldnsV1dEL7JCwE_vnBTwywHaFu&pid=Api&P=0&h=180">
+    <h3> Peach </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.zkUqUyC5bDtTPUpBAzsPyAHaE5&pid=Api&P=0&h=180">
+    <h3> Fruits </h3>
+    <p> Upto 40% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.3aTLaPO8nmqVihDswWej5gHaE_&pid=Api&P=0&h=180">
+    <h3> Pear </h3>
+    <p> Upto 45% off </p>
+    <a href="#" class="btn"> Add to cart  </a>
+    </div>
+    
+    <div class="box">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.Y6GvLlqAmO9H2vtN73ReQwHaE8&pid=Api&P=0&h=180">
+    <h3> Tamrind </h3>
+    <p> Upto 35% off </p>
+    <a href="#" class="btn"> Add to cart </a>
+    </div>
+    </div>
+    </section>
+
+    <!--footer-->
+<section class="footer">
+<div class="box-container">
+<div class="box">
+<h3> Grocery <i class="fa fa-shopping-basket"></i></h3>
+<p>Fell free to follow us on our social media Handlers all the the thinks are given below.</p>
+<div class="share"> 
+<a href="https://www.youtube.com/@Manishaprajapati952" class="fa fa-youtube" target="_blank"></a>
+<a href="#" class="fa fa-twitter" target="_blank"></a>
+<a href="https://www.instagram.com/attitude_dolly34?utm_source=qr&r=nametag" class="fa fa-instagram" target="_blank"></a>
+<a href="https://www.linkedin.com/in/manisha-prajapati-b5254127a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fa fa-linkedin" target="_blank"></a>
+</div>
+</div>
+
+<div class="box">
+<h3> Contact Info </h3>
+<a href="tel:9118765885" class="links"><i class="fa fa-phone"></i>  +9118765885 </a>
+<a href="tel:9334398132" class="links"><i class="fa fa-phone"></i>  +9334398132 </a>
+<a href="#" class="links"><i class="fa fa-envelope"></i> manisha.pajapati.2005@gmail.com  </a>
+<a href="#" class="links"><i class="fa fa-map-marker"></i> danopur deoria,india ,274001 </a>
+</div>
+
+<div class="box">
+<h3>Quick Links </h3>
+<a href="#Home" class="links"><i class="fa fa-arrow-right"></i> Home </a>
+<a href="#Features" class="links"><i class="fa fa-arrow-right"></i> Features </a>
+<a href="#Products" class="links"><i class="fa fa-arrow-right"></i> Products </a>
+<a href="#Categories" class="links"><i class="fa fa-arrow-right"></i> Categories </a>
+<a href="#Reviews" class="links"><i class="fa fa-arrow-right"></i> Reviews </a>
+<a href="#Blog" class="links"><i class="fa fa-arrow-right"></i> Blog </a>
+
+</div>
+
+<div class="box">
+<h3> Newsletter </h3>
+<p> Subscribe For latest Updates </p>
+<input type="email" placeholder="your email" class="email" >
+<input type="submit" value="Subscribe" class="btn"></br>
+<img src="{% static 'img/card.png' %}" class="payment">
+</div>
+</div>
+
+<div class="credit">
+Created by <span> Manisha prajapati </span> | All Right Reserverd 
+</div>
+</section>
+
+
+   <script src="{% static 'script.js' %}">  </script>
+    </body>
+</html>
+
+
